@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sports &amp; Recreation — Legacy Park</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gd:#1a3d2b;--gm:#2d6a4f;--gl:#52b788;--gp:#d8f3dc;--gold:#c9a84c;--gl2:#f0d080;--cream:#fdf8f0;--text:#1c2b20;--muted:#5a7065;--white:#fff;--shadow:0 4px 24px rgba(0,0,0,.08);--r:16px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:68px;background:rgba(26,61,43,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo{width:36px;height:36px;background:linear-gradient(135deg,var(--gl),var(--gold));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.nav-name{color:#fff;font-weight:700;font-size:1rem;line-height:1.2}
+.nav-sub{color:rgba(255,255,255,.45);font-size:.7rem}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;padding:7px 13px;border-radius:8px;font-size:.88rem;transition:.2s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.1);color:#fff}
+.nav-links .cta{background:var(--gold);color:var(--gd)!important;font-weight:700}
+.nav-links .cta:hover{background:var(--gl2)}
+section{padding:80px 40px}
+.container{max-width:1200px;margin:0 auto}
+.s-label{display:inline-flex;align-items:center;gap:8px;color:var(--gm);font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.s-label::before{content:'';width:22px;height:2px;background:var(--gl);border-radius:2px}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;color:var(--gd);line-height:1.2;margin-bottom:14px}
+h3{font-size:1.15rem;font-weight:700;color:var(--gd);margin-bottom:10px}
+.s-desc{color:var(--muted);font-size:1rem;max-width:580px;margin-bottom:44px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:11px;font-weight:600;font-size:.9rem;text-decoration:none;border:none;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn-primary{background:var(--gold);color:var(--gd)}
+.btn-primary:hover{background:var(--gl2);transform:translateY(-2px)}
+.btn-green{background:var(--gm);color:#fff}
+.btn-green:hover{background:var(--gd);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--gm);border:2px solid var(--gm)}
+.btn-outline:hover{background:var(--gp)}
+footer{background:#111d17;color:rgba(255,255,255,.45);padding:36px 40px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer p{font-size:.83rem}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,.45);text-decoration:none;font-size:.83rem}
+.footer-links a:hover{color:var(--gl)}
+@media(max-width:768px){nav{padding:0 18px}.nav-links{display:none}section{padding:56px 20px}footer{padding:28px 20px}}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,var(--gd) 0%,#1f5c3a 100%);padding:120px 40px 64px}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:900;color:#fff;margin-bottom:12px}
+.page-hero p{color:rgba(255,255,255,.7);font-size:1.05rem;max-width:540px}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:20px;font-size:.83rem}
+.breadcrumb a{color:rgba(255,255,255,.55);text-decoration:none}
+.breadcrumb a:hover{color:#fff}
+.breadcrumb span{color:rgba(255,255,255,.3)}
+
+/* SPORT CARDS */
+.sport-card{background:#fff;border-radius:var(--r);border:1.5px solid #e8f0e8;overflow:hidden;margin-bottom:28px;transition:all .22s}
+.sport-card:hover{border-color:var(--gl);box-shadow:var(--shadow)}
+.sport-header{background:var(--gd);padding:28px 32px;display:flex;align-items:center;gap:20px}
+.sport-icon{font-size:2.8rem;background:rgba(255,255,255,.1);width:64px;height:64px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sport-title{color:#fff;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:4px}
+.sport-sub{color:rgba(255,255,255,.6);font-size:.88rem}
+.sport-body{padding:28px 32px}
+.sport-body p{color:var(--muted);line-height:1.7;margin-bottom:16px}
+.sport-details{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin:20px 0;padding:20px;background:var(--gp);border-radius:12px}
+.sport-detail h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--gm);margin-bottom:4px}
+.sport-detail p{font-size:.88rem;color:var(--text);line-height:1.4}
+.sport-detail a{color:var(--gm);text-decoration:none;font-weight:500}
+.sport-detail a:hover{text-decoration:underline}
+.sport-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.badge{display:inline-block;padding:4px 12px;border-radius:100px;font-size:.75rem;font-weight:600;background:var(--gp);color:var(--gm)}
+.badge-gold{background:#fff3d0;color:#7a5b0a}
+.badge-blue{background:#dbeafe;color:#1e40af}
+
+/* INFO BAND */
+.info-band{background:var(--gd);padding:56px 40px}
+.info-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:32px}
+.info-panel h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gl2);margin-bottom:12px}
+.info-panel p,.info-panel li{color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.7}
+.info-panel ul{list-style:none}
+.info-panel li{padding:3px 0}
+.info-panel li::before{content:'→ ';color:var(--gl)}
+.info-panel a{color:var(--gl2);text-decoration:none}
+.info-panel a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">
+    <div class="nav-logo">🌳</div>
+    <div><div class="nav-name">Legacy Park</div><div class="nav-sub">Kennesaw, GA</div></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/sports.html" class="active">Sports</a></li>
+    <li><a href="/residents.html">Residents</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="https://legacypark.org/newsletters" target="_blank">Newsletter</a></li>
+    <li><a href="https://legacypark.org/event-calendar" target="_blank">Calendar</a></li>
+    <li><a href="https://legacypark.managebuilding.com/Resident/portal/login" target="_blank" class="cta btn">Owner Portal</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a><span>/</span><span style="color:#fff">Sports &amp; Recreation</span></div>
+    <h1>⚽ Sports &amp; Recreation</h1>
+    <p>From youth leagues to adult pick-up games, Legacy Park has one of the most active sports communities in Kennesaw. A resident amenity ID is required for all facilities.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <p style="background:var(--gp);border-left:4px solid var(--gl);border-radius:10px;padding:14px 20px;color:var(--gd);font-size:.9rem;margin-bottom:48px">
+      <strong>Amenity ID Required:</strong> A Legacy Park Amenity ID card must be carried at all times when using community sports facilities. Residents must be present with any non-resident guests and stay within guest ratio limits.
+    </p>
+
+    <!-- ADULT SOCCER -->
+    <div class="sport-card" id="soccer">
+      <div class="sport-header">
+        <div class="sport-icon">⚽</div>
+        <div>
+          <div class="sport-title">Adult Soccer</div>
+          <div class="sport-sub">Informal pick-up league · 18+ residents</div>
+        </div>
+        <div style="margin-left:auto"><span class="badge-gold badge">Residents 18+</span></div>
+      </div>
+      <div class="sport-body">
+        <p><strong>Mission:</strong> To Enjoy the Game, While Promoting Positive Attitudes and Fitness. This is an informal soccer league that plays pick-up games. The annual season begins in September, but players are accepted throughout the season.</p>
+        <p><strong>Field Leader Order:</strong> Jeff M, Scott T, Pierre J, RJ P, Ken K — if none of these are present, the board will appoint the Field Leader.</p>
+        <div class="sport-details">
+          <div class="sport-detail"><h4>Contact</h4><p>Scott Thiewes<br><a href="mailto:scottthiewes@comcast.net">scottthiewes@comcast.net</a></p></div>
+          <div class="sport-detail"><h4>Season</h4><p>Annual — begins September. Players accepted all season.</p></div>
+          <div class="sport-detail"><h4>Age Requirement</h4><p>18+ to play. Younger players may be allowed per field leader discretion.</p></div>
+        </div>
+        <div class="sport-actions">
+          <a href="https://legacyparksports.leagueapps.com" target="_blank" class="btn btn-green">Register (Resident) →</a>
+          <a href="https://legacyparksports.leagueapps.com" target="_blank" class="btn btn-outline">Register (Non-Resident) →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- YOUTH SOCCER -->
+    <div class="sport-card" id="youth-soccer">
+      <div class="sport-header">
+        <div class="sport-icon">👟</div>
+        <div>
+          <div class="sport-title">Youth Soccer</div>
+          <div class="sport-sub">Spring 2026 season now open</div>
+        </div>
+        <div style="margin-left:auto"><span class="badge-blue badge">Spring 2026 Open</span></div>
+      </div>
+      <div class="sport-body">
+        <p>Youth soccer spring 2026 registration is now open. Practices and games will not begin until March — the Town Green is currently undergoing repairs and will not be available until that time.</p>
+        <p>Non-residents: due to guest ratio limits, team placement is not guaranteed until rosters are complete. A refund will be issued if non-residents are not placed on a team in the requested division (2% processing fee applies).</p>
+        <div class="sport-details">
+          <div class="sport-detail"><h4>Registration Opens</h4><p>Residents: January 5, 2026<br>Non-Residents: January 19, 2026</p></div>
+          <div class="sport-detail"><h4>Season Start</h4><p>Practices &amp; games begin March 2026</p></div>
+          <div class="sport-detail"><h4>Platform</h4><p>LeagueApps — primary communication tool throughout registration &amp; season</p></div>
+        </div>
+        <div class="sport-actions">
+          <a href="https://legacyparksports.leagueapps.com/leagues/soccer/4798559-lp-youth-soccer-spring-2026" target="_blank" class="btn btn-primary">Register for Spring 2026 →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TENNIS -->
+    <div class="sport-card" id="tennis">
+      <div class="sport-header" style="background:#1c4d38">
+        <div class="sport-icon">🎾</div>
+        <div>
+          <div class="sport-title">Tennis</div>
+          <div class="sport-sub">11 courts · Director Clifford Malivert · Lessons available</div>
+        </div>
+      </div>
+      <div class="sport-body">
+        <p>Legacy Park's 11 tennis courts are for the <strong>exclusive use of residents and their guests</strong>. A resident must be on the court with any non-resident guests and be within the guest ratio. Members must carry their amenity ID card at all times.</p>
+        <p>Meet your Tennis Director, <strong>Clifford Malivert</strong> — 30+ years of experience. Cliff has worked with ATP and WTA professionals and brings elite-level coaching to the Legacy Park community.</p>
+        <div class="sport-details">
+          <div class="sport-detail"><h4>Tennis Director</h4><p>Clifford Malivert<br>30+ years experience</p></div>
+          <div class="sport-detail"><h4>Adult Lessons</h4><p>David Lopez, Tennis Coordinator<br><a href="mailto:lptenniscoordinator@gmail.com">lptenniscoordinator@gmail.com</a><br>(773) 787-6764</p></div>
+          <div class="sport-detail"><h4>Tennis Committee</h4><p>Stacey Tuchmann<br><a href="mailto:tennis@legacypark.org">tennis@legacypark.org</a></p></div>
+          <div class="sport-detail"><h4>Courts</h4><p>11 courts · Residents only<br>Amenity ID required</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PICKLEBALL -->
+    <div class="sport-card" id="pickleball">
+      <div class="sport-header" style="background:#2d4a1e">
+        <div class="sport-icon">🏓</div>
+        <div>
+          <div class="sport-title">Pickleball</div>
+          <div class="sport-sub">Court reservations available · No-Show Policy in effect</div>
+        </div>
+      </div>
+      <div class="sport-body">
+        <p>Legacy Park has dedicated pickleball courts with an active community of players. Courts 1 &amp; 2 were updated in July 2024. A no-show policy is in effect (effective August 26, 2025) — please respect reserved court times.</p>
+        <div class="sport-details">
+          <div class="sport-detail"><h4>Pickleball Director</h4><p>Lisa DeGirolamo<br><a href="mailto:AtlantaLisa@yahoo.com">AtlantaLisa@yahoo.com</a><br>(404) 234-7598</p></div>
+          <div class="sport-detail"><h4>Pickleball Committee</h4><p>Betsy Raglin<br><a href="mailto:pickleball@legacypark.org">pickleball@legacypark.org</a></p></div>
+          <div class="sport-detail"><h4>Courts</h4><p>Courts 1 &amp; 2 updated Jul 2024<br>Reservation required</p></div>
+        </div>
+        <div class="sport-actions">
+          <a href="https://legacypark.org/sports" target="_blank" class="btn btn-green">Reserve a Court →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- T-BALL -->
+    <div class="sport-card" id="tball">
+      <div class="sport-header">
+        <div class="sport-icon">⚾</div>
+        <div>
+          <div class="sport-title">T-Ball</div>
+          <div class="sport-sub">Spring 2026 registration open · Games begin March</div>
+        </div>
+        <div style="margin-left:auto"><span class="badge-blue badge">Spring 2026 Open</span></div>
+      </div>
+      <div class="sport-body">
+        <p>T-Ball Spring 2026 registration is open. Games and practices will not begin until March. Residents may register starting January 5th; non-residents starting January 19th. Late registration (January 22–23) incurs a $10 late fee.</p>
+        <div class="sport-details">
+          <div class="sport-detail"><h4>Resident Registration</h4><p>Opens January 5, 2026</p></div>
+          <div class="sport-detail"><h4>Non-Resident Registration</h4><p>Opens January 19, 2026</p></div>
+          <div class="sport-detail"><h4>Late Registration</h4><p>January 22–23 · $10 late fee</p></div>
+          <div class="sport-detail"><h4>Season Start</h4><p>March 2026</p></div>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin-top:10px"><strong>Team Placement Policy:</strong> Friend or team placement requests cannot be granted. Participants may not have the same coach each season — we believe different coaching styles build new friendships and maintain league equity. Requests limited to 1–2 per season.</p>
+        <div class="sport-actions">
+          <a href="https://legacyparksports.leagueapps.com/leagues/baseball/4797621-lp-t-ball-spring-2026" target="_blank" class="btn btn-primary">Register for T-Ball →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRAVEL SOCCER -->
+    <div class="sport-card" id="travel-soccer">
+      <div class="sport-header" style="background:#1f4d2e">
+        <div class="sport-icon">🏆</div>
+        <div>
+          <div class="sport-title">Recreational Travel Soccer</div>
+          <div class="sport-sub">LPSC · Divisional &amp; Tournament Champions</div>
+        </div>
+      </div>
+      <div class="sport-body">
+        <p>What began as a small neighborhood team in 2019 has rapidly evolved into a formidable program making a significant impact on competition across the state of Georgia.</p>
+        <p>By Fall 2020, LPSC expanded to two full, championship-caliber teams. The program boasts strong performance records including multiple <strong>Divisional Championships</strong>, over a <strong>dozen Tournament Championships</strong>, and multiple appearances at Tournament finals.</p>
+        <p style="font-style:italic;color:var(--gm);font-weight:500">"Above all, we are a family — one that plays together, grows together, and supports one another unconditionally."</p>
+        <div class="sport-actions" style="margin-top:20px">
+          <a href="https://www.instagram.com/legacyparksoccer" target="_blank" class="btn btn-green">Follow @legacyparksoccer →</a>
+          <a href="https://legacyparksports.leagueapps.com" target="_blank" class="btn btn-outline">LeagueApps Registration →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOLLEYBALL -->
+    <div class="sport-card" id="volleyball">
+      <div class="sport-header">
+        <div class="sport-icon">🏐</div>
+        <div>
+          <div class="sport-title">Volleyball</div>
+          <div class="sport-sub">Resident amenity · ID required</div>
+        </div>
+      </div>
+      <div class="sport-body">
+        <p>Legacy Park has a volleyball court available for residents in good standing. You must have a Legacy Park Amenity ID with you when using this amenity. Standard amenity rules apply regarding guest ratios.</p>
+        <div class="sport-details">
+          <div class="sport-detail"><h4>Requirements</h4><p>Resident in good standing<br>Amenity ID required</p></div>
+          <div class="sport-detail"><h4>Questions?</h4><p><a href="mailto:activitiesdirector@legacypark.org">activitiesdirector@legacypark.org</a></p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCOUTS / CLUBS -->
+    <div class="sport-card">
+      <div class="sport-header" style="background:#3a3a1a">
+        <div class="sport-icon">🏕️</div>
+        <div>
+          <div class="sport-title">Scouts &amp; Clubs</div>
+          <div class="sport-sub">Cub Scout Pack 002 · Boy Scout Troop 002</div>
+        </div>
+      </div>
+      <div class="sport-body">
+        <div class="sport-details">
+          <div class="sport-detail"><h4>Cub Scout Pack 002</h4><p><a href="mailto:cubmaster@pack002.com">cubmaster@pack002.com</a></p></div>
+          <div class="sport-detail"><h4>Boy Scout Troop 002</h4><p><a href="mailto:scoutmaster@troop002.org">scoutmaster@troop002.org</a></p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="info-band">
+  <div class="info-grid">
+    <div class="info-panel">
+      <h3>🎽 Sports Registration</h3>
+      <p>Most sports use LeagueApps as the primary registration and communication platform.</p><br>
+      <p><a href="https://legacyparksports.leagueapps.com" target="_blank">legacyparksports.leagueapps.com →</a></p>
+    </div>
+    <div class="info-panel">
+      <h3>🪪 Amenity ID</h3>
+      <p>An amenity ID card is required for all facilities. Get yours at the HOA office during office hours.</p><br>
+      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScqY9K3hBfW_QVNo2PGVzDDyvlc5N62i97MrsCnIhDDtSZdoA/viewform" target="_blank">Complete Access Card Waiver →</a></p>
+    </div>
+    <div class="info-panel">
+      <h3>📞 Activities Office</h3>
+      <p>Michelle Melton<br>Activities &amp; Sports Director<br><a href="mailto:activitiesdirector@legacypark.org">activitiesdirector@legacypark.org</a><br><br>HOA Office: <a href="tel:7709192556">(770) 919-2556</a></p>
+    </div>
+    <div class="info-panel">
+      <h3>📅 Events Calendar</h3>
+      <p>Check the full community calendar for sports events, tournaments, and seasonal programming.</p><br>
+      <p><a href="https://legacypark.org/event-calendar" target="_blank">View Calendar →</a></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2025 Legacy Park Community Association · Kennesaw, GA · <a href="tel:7709192556" style="color:var(--gl)">(770) 919-2556</a></p>
+    <div class="footer-links">
+      <a href="/">Home</a><a href="/sports.html">Sports</a><a href="/residents.html">Residents</a><a href="/contact.html">Contact</a>
+      <a href="https://legacypark.managebuilding.com/Resident/portal/login" target="_blank">Owner Portal</a>
+    </div>
+  </div>
+</footer>
+</body></html>
