@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legacy Park — Design Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #0b1120; color: #f0f4f8; min-height: 100vh; }
+    .header { padding: 60px 40px 40px; text-align: center; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .header h1 { font-size: 2rem; font-weight: 700; color: white; margin-bottom: 8px; }
+    .header p  { color: #8b99b0; font-size: 1rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1000px; margin: 60px auto; padding: 0 40px; }
+    .card { background: #111827; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; overflow: hidden; transition: transform .25s, border-color .25s; }
+    .card:hover { transform: translateY(-4px); border-color: rgba(14,165,233,.3); }
+    .card-preview { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+    .v1-preview { background: linear-gradient(135deg, #1a3d2b, #2d6a4f); }
+    .v2-preview { background: linear-gradient(135deg, #0b1120, #0d2035); }
+    .card-body { padding: 24px; }
+    .card-tag { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; color: #0ea5e9; }
+    .card-body h2 { font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 8px; }
+    .card-body p  { font-size: .88rem; color: #8b99b0; line-height: 1.6; margin-bottom: 20px; }
+    .card-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .badge { background: rgba(14,165,233,.1); color: #0ea5e9; padding: 4px 10px; border-radius: 100px; font-size: .75rem; font-weight: 600; }
+    .badge.green { background: rgba(16,185,129,.1); color: #10b981; }
+    .badge.amber { background: rgba(245,158,11,.1); color: #f59e0b; }
+    .btn { display: inline-block; padding: 10px 22px; border-radius: 10px; font-weight: 600; font-size: .9rem; text-decoration: none; transition: .2s; }
+    .btn-teal  { background: #0ea5e9; color: white; }
+    .btn-teal:hover { background: #0284c7; }
+    .btn-ghost { background: rgba(255,255,255,.06); color: #f0f4f8; margin-left: 10px; border: 1px solid rgba(255,255,255,.1); }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; padding: 0 20px; } }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🌳 Legacy Park — Design Preview</h1>
+    <p>Two modern redesigns of legacypark.org — choose your favourite</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-preview v1-preview">🌿</div>
+      <div class="card-body">
+        <div class="card-tag">Version 1</div>
+        <h2>Community Spirit</h2>
+        <p>Warm greens and earth tones. Nature-inspired, inviting, classic community feel. Great for families and a welcoming HOA presence.</p>
+        <div class="card-badges">
+          <span class="badge green">Nature-Inspired</span>
+          <span class="badge green">Warm & Inviting</span>
+          <span class="badge">Light Mode</span>
+        </div>
+        <a href="/v1.html" class="btn btn-teal">View Version 1</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-preview v2-preview">🚀</div>
+      <div class="card-body">
+        <div class="card-tag">Version 2</div>
+        <h2>Modern Hub</h2>
+        <p>Bold dark navy with teal &amp; mint accents. Contemporary, sharp, dashboard-style. Makes the community feel forward-thinking and dynamic.</p>
+        <div class="card-badges">
+          <span class="badge">Dark Mode</span>
+          <span class="badge">Bold &amp; Modern</span>
+          <span class="badge amber">Tech Forward</span>
+        </div>
+        <a href="/v2.html" class="btn btn-teal">View Version 2</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

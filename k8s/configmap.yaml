@@ -1,0 +1,743 @@
+apiVersion: v1
+data:
+  index.html: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\"\
+    >\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    >\n  <title>Legacy Park — Design Preview</title>\n  <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap\"\
+    \ rel=\"stylesheet\">\n  <style>\n    * { box-sizing: border-box; margin: 0; padding:\
+    \ 0; }\n    body { font-family: 'Inter', sans-serif; background: #0b1120; color:\
+    \ #f0f4f8; min-height: 100vh; }\n    .header { padding: 60px 40px 40px; text-align:\
+    \ center; border-bottom: 1px solid rgba(255,255,255,.08); }\n    .header h1 {\
+    \ font-size: 2rem; font-weight: 700; color: white; margin-bottom: 8px; }\n   \
+    \ .header p  { color: #8b99b0; font-size: 1rem; }\n    .grid { display: grid;\
+    \ grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1000px; margin: 60px auto;\
+    \ padding: 0 40px; }\n    .card { background: #111827; border: 1px solid rgba(255,255,255,.08);\
+    \ border-radius: 16px; overflow: hidden; transition: transform .25s, border-color\
+    \ .25s; }\n    .card:hover { transform: translateY(-4px); border-color: rgba(14,165,233,.3);\
+    \ }\n    .card-preview { height: 200px; display: flex; align-items: center; justify-content:\
+    \ center; font-size: 4rem; }\n    .v1-preview { background: linear-gradient(135deg,\
+    \ #1a3d2b, #2d6a4f); }\n    .v2-preview { background: linear-gradient(135deg,\
+    \ #0b1120, #0d2035); }\n    .card-body { padding: 24px; }\n    .card-tag { font-size:\
+    \ .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom:\
+    \ 8px; color: #0ea5e9; }\n    .card-body h2 { font-size: 1.2rem; font-weight:\
+    \ 700; color: white; margin-bottom: 8px; }\n    .card-body p  { font-size: .88rem;\
+    \ color: #8b99b0; line-height: 1.6; margin-bottom: 20px; }\n    .card-badges {\
+    \ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }\n    .badge\
+    \ { background: rgba(14,165,233,.1); color: #0ea5e9; padding: 4px 10px; border-radius:\
+    \ 100px; font-size: .75rem; font-weight: 600; }\n    .badge.green { background:\
+    \ rgba(16,185,129,.1); color: #10b981; }\n    .badge.amber { background: rgba(245,158,11,.1);\
+    \ color: #f59e0b; }\n    .btn { display: inline-block; padding: 10px 22px; border-radius:\
+    \ 10px; font-weight: 600; font-size: .9rem; text-decoration: none; transition:\
+    \ .2s; }\n    .btn-teal  { background: #0ea5e9; color: white; }\n    .btn-teal:hover\
+    \ { background: #0284c7; }\n    .btn-ghost { background: rgba(255,255,255,.06);\
+    \ color: #f0f4f8; margin-left: 10px; border: 1px solid rgba(255,255,255,.1); }\n\
+    \    .btn-ghost:hover { background: rgba(255,255,255,.12); }\n    @media (max-width:\
+    \ 640px) { .grid { grid-template-columns: 1fr; padding: 0 20px; } }\n  </style>\n\
+    </head>\n<body>\n  <div class=\"header\">\n    <h1>\U0001F333 Legacy Park — Design\
+    \ Preview</h1>\n    <p>Two modern redesigns of legacypark.org — choose your favourite</p>\n\
+    \  </div>\n  <div class=\"grid\">\n    <div class=\"card\">\n      <div class=\"\
+    card-preview v1-preview\">\U0001F33F</div>\n      <div class=\"card-body\">\n\
+    \        <div class=\"card-tag\">Version 1</div>\n        <h2>Community Spirit</h2>\n\
+    \        <p>Warm greens and earth tones. Nature-inspired, inviting, classic community\
+    \ feel. Great for families and a welcoming HOA presence.</p>\n        <div class=\"\
+    card-badges\">\n          <span class=\"badge green\">Nature-Inspired</span>\n\
+    \          <span class=\"badge green\">Warm & Inviting</span>\n          <span\
+    \ class=\"badge\">Light Mode</span>\n        </div>\n        <a href=\"/v1.html\"\
+    \ class=\"btn btn-teal\">View Version 1</a>\n      </div>\n    </div>\n    <div\
+    \ class=\"card\">\n      <div class=\"card-preview v2-preview\">\U0001F680</div>\n\
+    \      <div class=\"card-body\">\n        <div class=\"card-tag\">Version 2</div>\n\
+    \        <h2>Modern Hub</h2>\n        <p>Bold dark navy with teal &amp; mint accents.\
+    \ Contemporary, sharp, dashboard-style. Makes the community feel forward-thinking\
+    \ and dynamic.</p>\n        <div class=\"card-badges\">\n          <span class=\"\
+    badge\">Dark Mode</span>\n          <span class=\"badge\">Bold &amp; Modern</span>\n\
+    \          <span class=\"badge amber\">Tech Forward</span>\n        </div>\n \
+    \       <a href=\"/v2.html\" class=\"btn btn-teal\">View Version 2</a>\n     \
+    \ </div>\n    </div>\n  </div>\n</body>\n</html>\n"
+  v1.html: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\"\
+    >\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    >\n  <title>Legacy Park — Kennesaw, GA</title>\n  <link rel=\"preconnect\" href=\"\
+    https://fonts.googleapis.com\">\n  <link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap\"\
+    \ rel=\"stylesheet\">\n  <style>\n    *, *::before, *::after { box-sizing: border-box;\
+    \ margin: 0; padding: 0; }\n\n    :root {\n      --green-dark:  #1a3d2b;\n   \
+    \   --green-mid:   #2d6a4f;\n      --green-light: #52b788;\n      --green-pale:\
+    \  #d8f3dc;\n      --gold:        #c9a84c;\n      --gold-light:  #f0d080;\n  \
+    \    --cream:       #fdf8f0;\n      --text:        #1c2b20;\n      --muted:  \
+    \     #5a7065;\n      --white:       #ffffff;\n      --card-shadow: 0 4px 24px\
+    \ rgba(0,0,0,.08);\n      --radius:      16px;\n    }\n\n    html { scroll-behavior:\
+    \ smooth; }\n\n    body {\n      font-family: 'Inter', sans-serif;\n      background:\
+    \ var(--cream);\n      color: var(--text);\n      line-height: 1.6;\n    }\n\n\
+    \    /* ── NAV ─────────────────────────────────────────── */\n    nav {\n   \
+    \   position: fixed; top: 0; left: 0; right: 0;\n      z-index: 100;\n      display:\
+    \ flex; align-items: center; justify-content: space-between;\n      padding: 0\
+    \ 40px;\n      height: 70px;\n      background: rgba(26,61,43,.95);\n      backdrop-filter:\
+    \ blur(12px);\n      border-bottom: 1px solid rgba(255,255,255,.08);\n    }\n\
+    \    .nav-brand {\n      display: flex; align-items: center; gap: 12px;\n    \
+    \  text-decoration: none;\n    }\n    .nav-logo {\n      width: 38px; height:\
+    \ 38px;\n      background: linear-gradient(135deg, var(--green-light), var(--gold));\n\
+    \      border-radius: 10px;\n      display: flex; align-items: center; justify-content:\
+    \ center;\n      font-size: 20px;\n    }\n    .nav-brand-text { color: white;\
+    \ font-weight: 700; font-size: 1.05rem; line-height: 1.2; }\n    .nav-brand-sub\
+    \  { color: rgba(255,255,255,.5); font-size: .75rem; font-weight: 400; }\n   \
+    \ .nav-links { display: flex; align-items: center; gap: 6px; list-style: none;\
+    \ }\n    .nav-links a {\n      color: rgba(255,255,255,.8); text-decoration: none;\n\
+    \      padding: 7px 14px; border-radius: 8px; font-size: .9rem;\n      transition:\
+    \ all .2s;\n    }\n    .nav-links a:hover { background: rgba(255,255,255,.1);\
+    \ color: white; }\n    .nav-cta {\n      background: var(--gold) !important; color:\
+    \ var(--green-dark) !important;\n      font-weight: 600; padding: 8px 18px !important;\n\
+    \    }\n    .nav-cta:hover { background: var(--gold-light) !important; }\n   \
+    \ .nav-toggle { display: none; background: none; border: none; cursor: pointer;\
+    \ }\n    .nav-toggle span { display: block; width: 24px; height: 2px; background:\
+    \ white; margin: 5px 0; border-radius: 2px; transition: .3s; }\n\n    /* ── HERO\
+    \ ────────────────────────────────────────── */\n    .hero {\n      min-height:\
+    \ 100vh;\n      background:\n        linear-gradient(to bottom, rgba(20,50,32,.72)\
+    \ 0%, rgba(20,50,32,.4) 60%, rgba(253,248,240,1) 100%),\n        url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80')\
+    \ center/cover no-repeat;\n      display: flex; align-items: center;\n      padding:\
+    \ 120px 40px 80px;\n    }\n    .hero-inner { max-width: 720px; }\n    .hero-badge\
+    \ {\n      display: inline-flex; align-items: center; gap: 8px;\n      background:\
+    \ rgba(255,255,255,.15); backdrop-filter: blur(8px);\n      border: 1px solid\
+    \ rgba(255,255,255,.25);\n      color: white; padding: 6px 14px; border-radius:\
+    \ 100px;\n      font-size: .8rem; font-weight: 500; letter-spacing: .5px;\n  \
+    \    text-transform: uppercase; margin-bottom: 24px;\n    }\n    .hero-badge::before\
+    \ { content: '\U0001F33F'; }\n    h1 {\n      font-family: 'Playfair Display',\
+    \ serif;\n      font-size: clamp(2.6rem, 6vw, 4.5rem);\n      font-weight: 900;\
+    \ color: white; line-height: 1.1;\n      margin-bottom: 20px;\n      text-shadow:\
+    \ 0 2px 20px rgba(0,0,0,.3);\n    }\n    h1 em { color: var(--gold-light); font-style:\
+    \ normal; }\n    .hero-sub {\n      font-size: 1.15rem; color: rgba(255,255,255,.85);\n\
+    \      max-width: 540px; margin-bottom: 36px; font-weight: 300;\n    }\n    .hero-actions\
+    \ { display: flex; flex-wrap: wrap; gap: 14px; }\n    .btn {\n      display: inline-flex;\
+    \ align-items: center; gap: 8px;\n      padding: 13px 26px; border-radius: 12px;\n\
+    \      font-weight: 600; font-size: .95rem;\n      text-decoration: none; border:\
+    \ none; cursor: pointer;\n      transition: all .2s; white-space: nowrap;\n  \
+    \  }\n    .btn-primary   { background: var(--gold); color: var(--green-dark);\
+    \ }\n    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px);\
+    \ box-shadow: 0 8px 24px rgba(201,168,76,.4); }\n    .btn-outline   { background:\
+    \ rgba(255,255,255,.12); color: white; border: 1.5px solid rgba(255,255,255,.4);\
+    \ backdrop-filter: blur(8px); }\n    .btn-outline:hover { background: rgba(255,255,255,.22);\
+    \ transform: translateY(-2px); }\n    .btn-green     { background: var(--green-mid);\
+    \ color: white; }\n    .btn-green:hover { background: var(--green-dark); transform:\
+    \ translateY(-2px); box-shadow: 0 8px 24px rgba(45,106,79,.35); }\n\n    .hero-stats\
+    \ {\n      display: flex; flex-wrap: wrap; gap: 28px;\n      margin-top: 56px;\
+    \ padding-top: 40px;\n      border-top: 1px solid rgba(255,255,255,.15);\n   \
+    \ }\n    .stat { color: white; }\n    .stat-num { font-family: 'Playfair Display',\
+    \ serif; font-size: 2.2rem; font-weight: 700; line-height: 1; color: var(--gold-light);\
+    \ }\n    .stat-label { font-size: .8rem; color: rgba(255,255,255,.6); font-weight:\
+    \ 500; text-transform: uppercase; letter-spacing: .5px; margin-top: 4px; }\n\n\
+    \    /* ── SECTIONS ────────────────────────────────────── */\n    section { padding:\
+    \ 80px 40px; }\n    .container { max-width: 1200px; margin: 0 auto; }\n    .section-label\
+    \ {\n      display: inline-flex; align-items: center; gap: 8px;\n      color:\
+    \ var(--green-mid); font-weight: 600; font-size: .8rem;\n      text-transform:\
+    \ uppercase; letter-spacing: 1px; margin-bottom: 12px;\n    }\n    .section-label::before\
+    \ { content: ''; width: 24px; height: 2px; background: var(--green-light); border-radius:\
+    \ 2px; }\n    h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,\
+    \ 3.5vw, 2.6rem); font-weight: 700; color: var(--green-dark); line-height: 1.2;\
+    \ margin-bottom: 16px; }\n    .section-intro { color: var(--muted); font-size:\
+    \ 1.05rem; max-width: 600px; margin-bottom: 48px; }\n\n    /* ── QUICK LINKS ──────────────────────────────────\
+    \ */\n    .quick-links { background: white; }\n    .ql-grid { display: grid; grid-template-columns:\
+    \ repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }\n    .ql-card {\n      background:\
+    \ var(--cream); border-radius: var(--radius);\n      padding: 28px 24px; text-decoration:\
+    \ none; color: var(--text);\n      border: 1.5px solid transparent;\n      transition:\
+    \ all .25s; display: flex; flex-direction: column; gap: 12px;\n    }\n    .ql-card:hover\
+    \ { border-color: var(--green-light); transform: translateY(-3px); box-shadow:\
+    \ var(--card-shadow); }\n    .ql-icon { font-size: 2rem; }\n    .ql-card h3 {\
+    \ font-size: 1.05rem; font-weight: 600; color: var(--green-dark); }\n    .ql-card\
+    \ p  { font-size: .87rem; color: var(--muted); line-height: 1.5; }\n    .ql-arrow\
+    \ { margin-top: auto; color: var(--green-mid); font-weight: 600; font-size: .85rem;\
+    \ }\n\n    /* ── AMENITIES ──────────────────────────────────── */\n    .amenities\
+    \ { background: var(--green-pale); }\n    .am-grid { display: grid; grid-template-columns:\
+    \ repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }\n    .am-item {\n      background:\
+    \ white; border-radius: 14px; padding: 22px 18px;\n      display: flex; align-items:\
+    \ center; gap: 14px;\n      box-shadow: 0 2px 12px rgba(0,0,0,.05);\n      transition:\
+    \ transform .2s;\n    }\n    .am-item:hover { transform: translateY(-2px); }\n\
+    \    .am-icon { font-size: 1.6rem; flex-shrink: 0; }\n    .am-item span { font-size:\
+    \ .9rem; font-weight: 500; color: var(--green-dark); line-height: 1.3; }\n\n \
+    \   /* ── NEWS / EVENTS ──────────────────────────────── */\n    .events { background:\
+    \ white; }\n    .ev-grid { display: grid; grid-template-columns: repeat(auto-fill,\
+    \ minmax(300px, 1fr)); gap: 24px; }\n    .ev-card {\n      border-radius: var(--radius);\
+    \ overflow: hidden;\n      border: 1.5px solid #e8f0e8;\n      transition: all\
+    \ .25s;\n    }\n    .ev-card:hover { transform: translateY(-4px); box-shadow:\
+    \ var(--card-shadow); border-color: var(--green-light); }\n    .ev-header {\n\
+    \      background: var(--green-dark); padding: 24px;\n      display: flex; align-items:\
+    \ center; gap: 16px;\n    }\n    .ev-date {\n      background: var(--gold); color:\
+    \ var(--green-dark);\n      border-radius: 10px; padding: 8px 14px; text-align:\
+    \ center; flex-shrink: 0;\n    }\n    .ev-date .day { font-family: 'Playfair Display',\
+    \ serif; font-size: 1.6rem; font-weight: 700; line-height: 1; }\n    .ev-date\
+    \ .mo  { font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing:\
+    \ 1px; }\n    .ev-title { color: white; font-weight: 600; font-size: 1rem; }\n\
+    \    .ev-time  { color: rgba(255,255,255,.6); font-size: .82rem; margin-top: 4px;\
+    \ }\n    .ev-body  { padding: 20px 24px; }\n    .ev-body p { font-size: .9rem;\
+    \ color: var(--muted); line-height: 1.6; }\n    .ev-tag {\n      display: inline-block;\
+    \ margin-top: 14px;\n      background: var(--green-pale); color: var(--green-mid);\n\
+    \      padding: 4px 12px; border-radius: 100px; font-size: .78rem; font-weight:\
+    \ 600;\n    }\n\n    /* ── INFO PANELS ─────────────────────────────────── */\n\
+    \    .info-band {\n      background: var(--green-dark);\n      padding: 64px 40px;\n\
+    \    }\n    .info-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns:\
+    \ repeat(auto-fill, minmax(260px, 1fr)); gap: 32px; }\n    .info-panel { color:\
+    \ white; }\n    .info-panel h3 { font-family: 'Playfair Display', serif; font-size:\
+    \ 1.25rem; color: var(--gold-light); margin-bottom: 14px; }\n    .info-panel p,\
+    \ .info-panel li { font-size: .9rem; color: rgba(255,255,255,.75); line-height:\
+    \ 1.7; }\n    .info-panel ul { list-style: none; padding: 0; }\n    .info-panel\
+    \ li::before { content: '→ '; color: var(--green-light); font-weight: 600; }\n\
+    \    .info-panel a { color: var(--gold-light); text-decoration: none; }\n    .info-panel\
+    \ a:hover { text-decoration: underline; }\n\n    /* ── BOARD MEETINGS ──────────────────────────────\
+    \ */\n    .meetings { background: var(--cream); }\n    .meet-cards { display:\
+    \ grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px;\
+    \ }\n    .meet-card {\n      background: white; border-radius: var(--radius);\
+    \ padding: 28px;\n      border-left: 4px solid var(--green-light);\n      box-shadow:\
+    \ var(--card-shadow);\n    }\n    .meet-type { font-size: .78rem; font-weight:\
+    \ 700; text-transform: uppercase; letter-spacing: 1px; color: var(--green-mid);\
+    \ margin-bottom: 10px; }\n    .meet-card h3 { font-size: 1.1rem; font-weight:\
+    \ 700; color: var(--green-dark); margin-bottom: 6px; }\n    .meet-card p  { font-size:\
+    \ .9rem; color: var(--muted); }\n\n    /* ── CONTACT / CTA ─────────────────────────────────\
+    \ */\n    .contact { background: white; }\n    .cta-box {\n      background: linear-gradient(135deg,\
+    \ var(--green-dark) 0%, var(--green-mid) 100%);\n      border-radius: 24px; padding:\
+    \ 60px 48px;\n      display: flex; flex-wrap: wrap; align-items: center; justify-content:\
+    \ space-between; gap: 32px;\n    }\n    .cta-box h2 { color: white; margin-bottom:\
+    \ 10px; }\n    .cta-box p  { color: rgba(255,255,255,.75); max-width: 480px; font-size:\
+    \ 1rem; }\n    .contact-info { display: flex; flex-direction: column; gap: 10px;\
+    \ margin-top: 28px; }\n    .ci { display: flex; align-items: center; gap: 10px;\
+    \ color: rgba(255,255,255,.8); font-size: .9rem; }\n    .ci-icon { font-size:\
+    \ 1.1rem; }\n\n    /* ── FOOTER ──────────────────────────────────────── */\n\
+    \    footer {\n      background: #111d17; color: rgba(255,255,255,.55);\n    \
+    \  padding: 32px 40px; text-align: center;\n      font-size: .85rem;\n    }\n\
+    \    footer a { color: var(--green-light); text-decoration: none; }\n\n    /*\
+    \ ── MOBILE ──────────────────────────────────────── */\n    @media (max-width:\
+    \ 768px) {\n      nav { padding: 0 20px; }\n      .nav-links { display: none;\
+    \ }\n      .nav-toggle { display: block; }\n      .hero { padding: 100px 20px\
+    \ 60px; }\n      section { padding: 60px 20px; }\n      .info-band { padding:\
+    \ 48px 20px; }\n      .cta-box { padding: 36px 24px; }\n      footer { padding:\
+    \ 24px 20px; }\n    }\n  </style>\n</head>\n<body>\n\n<!-- NAV -->\n<nav>\n  <a\
+    \ href=\"#\" class=\"nav-brand\">\n    <div class=\"nav-logo\">\U0001F333</div>\n\
+    \    <div>\n      <div class=\"nav-brand-text\">Legacy Park</div>\n      <div\
+    \ class=\"nav-brand-sub\">Kennesaw, Georgia</div>\n    </div>\n  </a>\n  <ul class=\"\
+    nav-links\">\n    <li><a href=\"#amenities\">Amenities</a></li>\n    <li><a href=\"\
+    #events\">Events</a></li>\n    <li><a href=\"#residents\">Residents</a></li>\n\
+    \    <li><a href=\"#contact\">Contact</a></li>\n    <li><a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\" class=\"nav-cta btn\">Resident Portal</a></li>\n  </ul>\n\
+    \  <button class=\"nav-toggle\" aria-label=\"Toggle menu\">\n    <span></span><span></span><span></span>\n\
+    \  </button>\n</nav>\n\n<!-- HERO -->\n<header class=\"hero\">\n  <div class=\"\
+    hero-inner\">\n    <div class=\"hero-badge\">Kennesaw, GA 30144</div>\n    <h1>Where\
+    \ <em>Nature</em> Meets<br>Community</h1>\n    <p class=\"hero-sub\">Legacy Park\
+    \ is one of Kennesaw's most beloved neighborhoods — 117 acres of parks, trails,\
+    \ pools, and community spaces woven together by years of shared memories.</p>\n\
+    \    <div class=\"hero-actions\">\n      <a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\" class=\"btn btn-primary\">\U0001F3E0 Resident Portal</a>\n\
+    \      <a href=\"#amenities\" class=\"btn btn-outline\">Explore Amenities</a>\n\
+    \      <a href=\"#events\" class=\"btn btn-outline\">\U0001F4C5 Events Calendar</a>\n\
+    \    </div>\n    <div class=\"hero-stats\">\n      <div class=\"stat\"><div class=\"\
+    stat-num\">117</div><div class=\"stat-label\">Acre Town Park</div></div>\n   \
+    \   <div class=\"stat\"><div class=\"stat-num\">4</div><div class=\"stat-label\"\
+    >Swimming Pools</div></div>\n      <div class=\"stat\"><div class=\"stat-num\"\
+    >11</div><div class=\"stat-label\">Tennis Courts</div></div>\n      <div class=\"\
+    stat\"><div class=\"stat-num\">11</div><div class=\"stat-label\">Neighborhood\
+    \ Parks</div></div>\n    </div>\n  </div>\n</header>\n\n<!-- QUICK LINKS -->\n\
+    <section class=\"quick-links\" id=\"residents\">\n  <div class=\"container\">\n\
+    \    <div class=\"section-label\">Get Started</div>\n    <h2>Everything You Need</h2>\n\
+    \    <p class=\"section-intro\">New to Legacy Park or just need quick access?\
+    \ Find the most important resources right here.</p>\n    <div class=\"ql-grid\"\
+    >\n      <a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\" class=\"ql-card\">\n        <div class=\"ql-icon\">\U0001F511\
+    </div>\n        <h3>Resident Portal</h3>\n        <p>Pay assessments, submit requests,\
+    \ and manage your account online.</p>\n        <div class=\"ql-arrow\">Access\
+    \ Portal →</div>\n      </a>\n      <a href=\"https://legacypark.org/event-calendar\"\
+    \ target=\"_blank\" class=\"ql-card\">\n        <div class=\"ql-icon\">\U0001F4C5\
+    </div>\n        <h3>Event Calendar</h3>\n        <p>Browse upcoming community\
+    \ events managed by our full-time Activities Director.</p>\n        <div class=\"\
+    ql-arrow\">View Events →</div>\n      </a>\n      <a href=\"https://legacypark.org/knowledge-base\"\
+    \ target=\"_blank\" class=\"ql-card\">\n        <div class=\"ql-icon\">\U0001F4CB\
+    </div>\n        <h3>Knowledge Base</h3>\n        <p>Governing documents, policies,\
+    \ modification forms, and FAQs — all searchable.</p>\n        <div class=\"ql-arrow\"\
+    >Browse Docs →</div>\n      </a>\n      <a href=\"https://docs.google.com/forms/d/e/1FAIpQLScqY9K3hBfW_QVNo2PGVzDDyvlc5N62i97MrsCnIhDDtSZdoA/viewform\"\
+    \ target=\"_blank\" class=\"ql-card\">\n        <div class=\"ql-icon\">\U0001FAAA\
+    </div>\n        <h3>Access Card</h3>\n        <p>New residents: complete the access\
+    \ card waiver to get your Legacy Park ID.</p>\n        <div class=\"ql-arrow\"\
+    >Get Your Card →</div>\n      </a>\n      <a href=\"https://legacypark.org/knowledge-base/committees\"\
+    \ target=\"_blank\" class=\"ql-card\">\n        <div class=\"ql-icon\">\U0001F91D\
+    </div>\n        <h3>Get Involved</h3>\n        <p>Join a committee and help shape\
+    \ the future of our neighborhood.</p>\n        <div class=\"ql-arrow\">See Committees\
+    \ →</div>\n      </a>\n      <a href=\"mailto:HOAoffice@LegacyPark.org\" class=\"\
+    ql-card\">\n        <div class=\"ql-icon\">✉️</div>\n        <h3>Contact HOA Staff</h3>\n\
+    \        <p>Mon–Fri 10am–2pm · 1st Saturday 9–11am · (770) 919-2556</p>\n    \
+    \    <div class=\"ql-arrow\">Email Us →</div>\n      </a>\n    </div>\n  </div>\n\
+    </section>\n\n<!-- AMENITIES -->\n<section class=\"amenities\" id=\"amenities\"\
+    >\n  <div class=\"container\">\n    <div class=\"section-label\">What We Offer</div>\n\
+    \    <h2>World-Class Amenities</h2>\n    <p class=\"section-intro\">From trails\
+    \ to pools to performing arts — Legacy Park has more to offer than most neighborhoods\
+    \ three times its size.</p>\n    <div class=\"am-grid\">\n      <div class=\"\
+    am-item\"><span class=\"am-icon\">\U0001F3CA</span><span>4 Swimming Pools</span></div>\n\
+    \      <div class=\"am-item\"><span class=\"am-icon\">\U0001F3BE</span><span>11\
+    \ Tennis Courts</span></div>\n      <div class=\"am-item\"><span class=\"am-icon\"\
+    >\U0001F333</span><span>11 Neighborhood Parks</span></div>\n      <div class=\"\
+    am-item\"><span class=\"am-icon\">\U0001F3DE️</span><span>117-Acre Town Park</span></div>\n\
+    \      <div class=\"am-item\"><span class=\"am-icon\">\U0001F33F</span><span>7-Acre\
+    \ Town Green</span></div>\n      <div class=\"am-item\"><span class=\"am-icon\"\
+    >\U0001F6B4</span><span>Miles of Bike Paths</span></div>\n      <div class=\"\
+    am-item\"><span class=\"am-icon\">\U0001F97E</span><span>Lighted Nature Trails</span></div>\n\
+    \      <div class=\"am-item\"><span class=\"am-icon\">\U0001F3C0</span><span>Basketball\
+    \ Courts</span></div>\n      <div class=\"am-item\"><span class=\"am-icon\">⚾</span><span>Baseball\
+    \ Field</span></div>\n      <div class=\"am-item\"><span class=\"am-icon\">\U0001F3AD\
+    </span><span>Cultural Amphitheater</span></div>\n      <div class=\"am-item\"\
+    ><span class=\"am-icon\">\U0001F3B5</span><span>Woodlands Bandstand</span></div>\n\
+    \      <div class=\"am-item\"><span class=\"am-icon\">\U0001F356</span><span>Picnic\
+    \ Grove</span></div>\n      <div class=\"am-item\"><span class=\"am-icon\">\U0001F30A\
+    </span><span>Beautiful Lake</span></div>\n      <div class=\"am-item\"><span class=\"\
+    am-icon\">\U0001F309</span><span>Scenic Bridges</span></div>\n      <div class=\"\
+    am-item\"><span class=\"am-icon\">\U0001F476</span><span>Children's Play Areas</span></div>\n\
+    \      <div class=\"am-item\"><span class=\"am-icon\">\U0001F4D6</span><span>Children's\
+    \ Storytime</span></div>\n    </div>\n  </div>\n</section>\n\n<!-- EVENTS -->\n\
+    <section class=\"events\" id=\"events\">\n  <div class=\"container\">\n    <div\
+    \ class=\"section-label\">Community Calendar</div>\n    <h2>Upcoming Events</h2>\n\
+    \    <p class=\"section-intro\">Our full-time Activities Director organizes events\
+    \ throughout the year — most are free for residents.</p>\n    <div class=\"ev-grid\"\
+    >\n      <div class=\"ev-card\">\n        <div class=\"ev-header\">\n        \
+    \  <div class=\"ev-date\"><div class=\"day\">11</div><div class=\"mo\">Mar</div></div>\n\
+    \          <div><div class=\"ev-title\">HOA Planning Meeting</div><div class=\"\
+    ev-time\">\U0001F4CD Clubhouse · 6:30 PM</div></div>\n        </div>\n       \
+    \ <div class=\"ev-body\">\n          <p>2nd Tuesday planning session — open to\
+    \ all residents. Bring your questions and ideas for the community.</p>\n     \
+    \     <div class=\"ev-tag\">Monthly</div>\n        </div>\n      </div>\n    \
+    \  <div class=\"ev-card\">\n        <div class=\"ev-header\">\n          <div\
+    \ class=\"ev-date\"><div class=\"day\">25</div><div class=\"mo\">Mar</div></div>\n\
+    \          <div><div class=\"ev-title\">HOA Board Meeting</div><div class=\"ev-time\"\
+    >\U0001F4CD Clubhouse · 6:30 PM</div></div>\n        </div>\n        <div class=\"\
+    ev-body\">\n          <p>4th Tuesday board meeting. Official decisions are made\
+    \ here — resident attendance is encouraged.</p>\n          <div class=\"ev-tag\"\
+    >Monthly</div>\n        </div>\n      </div>\n      <div class=\"ev-card\">\n\
+    \        <div class=\"ev-header\">\n          <div class=\"ev-date\"><div class=\"\
+    day\">1</div><div class=\"mo\">Apr</div></div>\n          <div><div class=\"ev-title\"\
+    >HOA Office Open Saturday</div><div class=\"ev-time\">\U0001F4CD HOA Office ·\
+    \ 9–11 AM</div></div>\n        </div>\n        <div class=\"ev-body\">\n     \
+    \     <p>First Saturday of the month — HOA office open for walk-in questions,\
+    \ access cards, and welcome packets.</p>\n          <div class=\"ev-tag\">Monthly</div>\n\
+    \        </div>\n      </div>\n    </div>\n    <div style=\"margin-top: 32px;\
+    \ text-align: center;\">\n      <a href=\"https://legacypark.org/event-calendar\"\
+    \ target=\"_blank\" class=\"btn btn-green\">View Full Calendar →</a>\n    </div>\n\
+    \  </div>\n</section>\n\n<!-- INFO BAND -->\n<div class=\"info-band\">\n  <div\
+    \ class=\"info-grid\">\n    <div class=\"info-panel\">\n      <h3>\U0001F3E0 New\
+    \ Residents</h3>\n      <ul>\n        <li>Visit HOA office for welcome packet</li>\n\
+    \        <li>Get your Legacy Park access card</li>\n        <li>Register in the\
+    \ Resident Portal</li>\n        <li>Learn about all your amenities</li>\n    \
+    \    <li>Check the events calendar</li>\n      </ul>\n    </div>\n    <div class=\"\
+    info-panel\">\n      <h3>\U0001F4DE HOA Office</h3>\n      <p>4201 Legacy Park\
+    \ Circle<br>Kennesaw, GA 30144<br><br>\n      <strong style=\"color:white\">Phone:</strong>\
+    \ <a href=\"tel:7709192556\">(770) 919-2556</a><br>\n      <strong style=\"color:white\"\
+    >Fax:</strong> (770) 919-0066<br>\n      <strong style=\"color:white\">Email:</strong>\
+    \ <a href=\"mailto:HOAoffice@LegacyPark.org\">HOAoffice@LegacyPark.org</a></p>\n\
+    \    </div>\n    <div class=\"info-panel\">\n      <h3>\U0001F550 Office Hours</h3>\n\
+    \      <p>Monday – Friday<br><strong style=\"color:white\">10:00 AM – 2:00 PM</strong><br><br>\n\
+    \      1st Saturday of the Month<br><strong style=\"color:white\">9:00 AM – 11:00\
+    \ AM</strong><br><br>\n      Appointments available — call to schedule.</p>\n\
+    \    </div>\n    <div class=\"info-panel\">\n      <h3>\U0001F4EC Board Contact</h3>\n\
+    \      <p>Questions for the Legacy Park Board of Directors?<br><br>\n      <a\
+    \ href=\"mailto:boardmembers@legacypark.org\">boardmembers@legacypark.org</a><br><br>\n\
+    \      Board meetings: 2nd &amp; 4th Tuesday of each month at 6:30 PM. Residents\
+    \ welcome.</p>\n    </div>\n  </div>\n</div>\n\n<!-- MEETINGS -->\n<section class=\"\
+    meetings\">\n  <div class=\"container\">\n    <div class=\"section-label\">Stay\
+    \ Involved</div>\n    <h2>Board Meeting Schedule</h2>\n    <p class=\"section-intro\"\
+    >All meetings are held at the Legacy Park Clubhouse at 6:30 PM. Resident attendance\
+    \ is encouraged and appreciated.</p>\n    <div class=\"meet-cards\">\n      <div\
+    \ class=\"meet-card\">\n        <div class=\"meet-type\">2nd Tuesday Monthly</div>\n\
+    \        <h3>Planning Meeting</h3>\n        <p>Community planning discussions.\
+    \ Bring ideas, concerns, or feedback. Open to all Legacy Park residents.</p>\n\
+    \      </div>\n      <div class=\"meet-card\" style=\"border-left-color: var(--gold);\"\
+    >\n        <div class=\"meet-type\" style=\"color: var(--gold);\">4th Tuesday\
+    \ Monthly</div>\n        <h3>Board Meeting</h3>\n        <p>Official board decisions\
+    \ are made here. The board encourages active resident participation.</p>\n   \
+    \   </div>\n      <div class=\"meet-card\" style=\"border-left-color: var(--muted);\"\
+    >\n        <div class=\"meet-type\" style=\"color: var(--muted);\">Questions?</div>\n\
+    \        <h3>Contact the Board</h3>\n        <p>Reach board members directly at\
+    \ <a href=\"mailto:boardmembers@legacypark.org\" style=\"color: var(--green-mid);\"\
+    >boardmembers@legacypark.org</a></p>\n      </div>\n    </div>\n  </div>\n</section>\n\
+    \n<!-- CONTACT -->\n<section class=\"contact\" id=\"contact\">\n  <div class=\"\
+    container\">\n    <div class=\"cta-box\">\n      <div>\n        <h2>Ready to Call\
+    \ Legacy Park Home?</h2>\n        <p>Reach out to the HOA staff with any questions\
+    \ about moving in, community guidelines, or upcoming events.</p>\n        <div\
+    \ class=\"contact-info\">\n          <div class=\"ci\"><span class=\"ci-icon\"\
+    >\U0001F4CD</span> 4201 Legacy Park Circle, Kennesaw, GA 30144</div>\n       \
+    \   <div class=\"ci\"><span class=\"ci-icon\">\U0001F4DE</span> <a href=\"tel:7709192556\"\
+    \ style=\"color:var(--gold-light)\">(770) 919-2556</a></div>\n          <div class=\"\
+    ci\"><span class=\"ci-icon\">✉️</span> <a href=\"mailto:HOAoffice@LegacyPark.org\"\
+    \ style=\"color:var(--gold-light)\">HOAoffice@LegacyPark.org</a></div>\n     \
+    \   </div>\n      </div>\n      <div style=\"display:flex; flex-direction:column;\
+    \ gap:14px; align-self: center;\">\n        <a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\" class=\"btn btn-primary\">\U0001F511 Resident Portal</a>\n\
+    \        <a href=\"mailto:HOAoffice@LegacyPark.org\" class=\"btn btn-outline\"\
+    >✉️ Email HOA Staff</a>\n        <a href=\"https://legacypark.org/knowledge-base\"\
+    \ target=\"_blank\" class=\"btn btn-outline\">\U0001F4CB Knowledge Base</a>\n\
+    \      </div>\n    </div>\n  </div>\n</section>\n\n<!-- FOOTER -->\n<footer>\n\
+    \  <p>© 2025 Legacy Park Community Association · 4201 Legacy Park Circle, Kennesaw,\
+    \ GA 30144</p>\n  <p style=\"margin-top:8px;\">\n    <a href=\"https://legacypark.org\"\
+    >legacypark.org</a> ·\n    <a href=\"tel:7709192556\">(770) 919-2556</a> ·\n \
+    \   <a href=\"mailto:HOAoffice@LegacyPark.org\">HOAoffice@LegacyPark.org</a>\n\
+    \  </p>\n</footer>\n\n</body>\n</html>\n"
+  v2.html: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\"\
+    >\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    >\n  <title>Legacy Park — Community Hub</title>\n  <link rel=\"preconnect\" href=\"\
+    https://fonts.googleapis.com\">\n  <link href=\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap\"\
+    \ rel=\"stylesheet\">\n  <style>\n    *, *::before, *::after { box-sizing: border-box;\
+    \ margin: 0; padding: 0; }\n\n    :root {\n      --navy:      #0b1120;\n     \
+    \ --navy-2:    #111827;\n      --navy-3:    #1e2d40;\n      --teal:      #0ea5e9;\n\
+    \      --teal-dim:  #0284c7;\n      --mint:      #10b981;\n      --amber:    \
+    \ #f59e0b;\n      --white:     #ffffff;\n      --offwhite:  #f0f4f8;\n      --muted:\
+    \     #8b99b0;\n      --border:    rgba(255,255,255,.08);\n      --glow-teal:\
+    \ 0 0 40px rgba(14,165,233,.2);\n      --r:         14px;\n    }\n\n    html {\
+    \ scroll-behavior: smooth; }\n\n    body {\n      font-family: 'Space Grotesk',\
+    \ sans-serif;\n      background: var(--navy);\n      color: var(--offwhite);\n\
+    \      line-height: 1.6;\n    }\n\n    /* ── NAV ───────────────────────────────────────────\
+    \ */\n    nav {\n      position: fixed; top: 0; left: 0; right: 0; z-index: 100;\n\
+    \      padding: 0 48px; height: 68px;\n      display: flex; align-items: center;\
+    \ justify-content: space-between;\n      background: rgba(11,17,32,.9); backdrop-filter:\
+    \ blur(16px);\n      border-bottom: 1px solid var(--border);\n    }\n    .nav-brand\
+    \ { display: flex; align-items: center; gap: 12px; text-decoration: none; }\n\
+    \    .nav-orb {\n      width: 36px; height: 36px; border-radius: 10px;\n     \
+    \ background: linear-gradient(135deg, var(--teal), var(--mint));\n      display:\
+    \ flex; align-items: center; justify-content: center;\n      font-weight: 800;\
+    \ font-size: .9rem; color: white;\n    }\n    .nb-name { color: white; font-family:\
+    \ 'Syne', sans-serif; font-weight: 700; font-size: 1rem; }\n    .nb-sub  { color:\
+    \ var(--muted); font-size: .72rem; }\n    .nav-items { display: flex; align-items:\
+    \ center; gap: 4px; list-style: none; }\n    .nav-items a {\n      color: var(--muted);\
+    \ text-decoration: none; padding: 7px 14px;\n      border-radius: 8px; font-size:\
+    \ .88rem; font-weight: 500; transition: .2s;\n    }\n    .nav-items a:hover {\
+    \ color: white; background: rgba(255,255,255,.06); }\n    .nav-portal {\n    \
+    \  background: var(--teal) !important; color: white !important;\n      font-weight:\
+    \ 600 !important; padding: 8px 18px !important;\n      box-shadow: 0 0 20px rgba(14,165,233,.35)\
+    \ !important;\n    }\n    .nav-portal:hover { background: var(--teal-dim) !important;\
+    \ }\n    .hbg { display: none; flex-direction: column; gap: 5px; background: none;\
+    \ border: none; cursor: pointer; }\n    .hbg span { width: 22px; height: 2px;\
+    \ background: white; border-radius: 2px; }\n\n    /* ── HERO ──────────────────────────────────────────\
+    \ */\n    .hero {\n      min-height: 100vh;\n      background:\n        radial-gradient(ellipse\
+    \ 80% 60% at 50% 0%, rgba(14,165,233,.12) 0%, transparent 70%),\n        var(--navy);\n\
+    \      display: flex; align-items: center;\n      padding: 100px 48px 60px;\n\
+    \      position: relative; overflow: hidden;\n    }\n    .hero::before {\n   \
+    \   content: '';\n      position: absolute; inset: 0;\n      background: url(\"\
+    data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg\
+    \ fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.03'%3E%3Cpath\
+    \ d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6\
+    \ 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\"\
+    );\n    }\n    .hero-wrap { max-width: 1200px; margin: 0 auto; width: 100%; display:\
+    \ grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; }\n  \
+    \  .hero-left { position: relative; z-index: 2; }\n    .hero-chip {\n      display:\
+    \ inline-flex; align-items: center; gap: 8px;\n      background: rgba(14,165,233,.12);\
+    \ border: 1px solid rgba(14,165,233,.25);\n      color: var(--teal); padding:\
+    \ 5px 14px; border-radius: 100px;\n      font-size: .78rem; font-weight: 600;\
+    \ letter-spacing: .5px;\n      text-transform: uppercase; margin-bottom: 24px;\n\
+    \    }\n    .hero-chip::before { content: ''; width: 7px; height: 7px; background:\
+    \ var(--teal); border-radius: 50%; animation: pulse 2s infinite; }\n    @keyframes\
+    \ pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.2)}\
+    \ }\n    h1 {\n      font-family: 'Syne', sans-serif;\n      font-size: clamp(2.8rem,\
+    \ 5.5vw, 4.8rem);\n      font-weight: 800; line-height: 1.05; color: white;\n\
+    \      margin-bottom: 22px; letter-spacing: -1px;\n    }\n    h1 .accent { color:\
+    \ var(--teal); }\n    h1 .accent2 { color: var(--mint); }\n    .hero-desc { color:\
+    \ var(--muted); font-size: 1.05rem; max-width: 520px; margin-bottom: 40px; line-height:\
+    \ 1.7; }\n    .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }\n    .btn\
+    \ {\n      display: inline-flex; align-items: center; gap: 9px;\n      padding:\
+    \ 12px 24px; border-radius: 10px;\n      font-family: 'Space Grotesk', sans-serif;\n\
+    \      font-weight: 600; font-size: .95rem; border: none; cursor: pointer;\n \
+    \     text-decoration: none; transition: all .2s; white-space: nowrap;\n    }\n\
+    \    .btn-teal   { background: var(--teal); color: white; box-shadow: 0 4px 20px\
+    \ rgba(14,165,233,.3); }\n    .btn-teal:hover { transform: translateY(-2px); box-shadow:\
+    \ 0 8px 28px rgba(14,165,233,.45); }\n    .btn-ghost  { background: rgba(255,255,255,.05);\
+    \ color: var(--offwhite); border: 1px solid var(--border); }\n    .btn-ghost:hover\
+    \ { background: rgba(255,255,255,.1); transform: translateY(-2px); }\n    .btn-mint\
+    \   { background: var(--mint); color: white; }\n    .btn-mint:hover { background:\
+    \ #059669; transform: translateY(-2px); }\n    .btn-amber  { background: var(--amber);\
+    \ color: var(--navy); }\n    .btn-amber:hover { background: #d97706; transform:\
+    \ translateY(-2px); }\n\n    /* Hero stats panel */\n    .hero-stats {\n     \
+    \ background: rgba(255,255,255,.04); border: 1px solid var(--border);\n      border-radius:\
+    \ 20px; padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;\n\
+    \      position: relative; z-index: 2;\n    }\n    .hs-item { text-align: center;\
+    \ }\n    .hs-num { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight:\
+    \ 800; color: var(--teal); line-height: 1; }\n    .hs-label { font-size: .78rem;\
+    \ color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing:\
+    \ .5px; margin-top: 6px; }\n    .hs-divider { grid-column: 1/-1; height: 1px;\
+    \ background: var(--border); }\n    .hs-note { grid-column: 1/-1; text-align:\
+    \ center; color: var(--muted); font-size: .82rem; }\n    .hs-highlight { color:\
+    \ var(--mint); font-weight: 600; }\n\n    /* ── SECTION BASE ──────────────────────────────────\
+    \ */\n    section { padding: 88px 48px; }\n    .container { max-width: 1200px;\
+    \ margin: 0 auto; }\n    .s-label {\n      display: inline-flex; align-items:\
+    \ center; gap: 8px;\n      font-size: .75rem; font-weight: 700; text-transform:\
+    \ uppercase; letter-spacing: 1.5px;\n      color: var(--teal); margin-bottom:\
+    \ 12px;\n    }\n    h2 {\n      font-family: 'Syne', sans-serif; font-weight:\
+    \ 800;\n      font-size: clamp(1.8rem, 3.5vw, 2.8rem);\n      color: white; line-height:\
+    \ 1.15; margin-bottom: 16px; letter-spacing: -.5px;\n    }\n    .s-desc { color:\
+    \ var(--muted); font-size: 1rem; max-width: 560px; margin-bottom: 48px; line-height:\
+    \ 1.7; }\n\n    /* ── PORTAL TILES ────────────────────────────────── */\n   \
+    \ .portal { background: var(--navy-2); }\n    .pt-grid { display: grid; grid-template-columns:\
+    \ repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }\n    .pt-tile {\n      background:\
+    \ var(--navy-3); border: 1px solid var(--border);\n      border-radius: var(--r);\
+    \ padding: 28px 24px;\n      text-decoration: none; color: var(--offwhite);\n\
+    \      transition: all .25s; display: flex; flex-direction: column; gap: 14px;\n\
+    \      position: relative; overflow: hidden;\n    }\n    .pt-tile::after {\n \
+    \     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;\n\
+    \      background: linear-gradient(90deg, transparent, var(--teal), transparent);\n\
+    \      opacity: 0; transition: opacity .25s;\n    }\n    .pt-tile:hover { border-color:\
+    \ rgba(14,165,233,.3); transform: translateY(-4px); box-shadow: var(--glow-teal);\
+    \ }\n    .pt-tile:hover::after { opacity: 1; }\n    .pt-icon { font-size: 1.8rem;\
+    \ }\n    .pt-tile h3 { font-size: 1rem; font-weight: 700; color: white; }\n  \
+    \  .pt-tile p  { font-size: .85rem; color: var(--muted); line-height: 1.55; flex-grow:\
+    \ 1; }\n    .pt-link { font-size: .82rem; font-weight: 600; color: var(--teal);\
+    \ margin-top: auto; }\n\n    /* ── AMENITIES ────────────────────────────────────\
+    \ */\n    .amenities { background: var(--navy); }\n    .am-grid { display: grid;\
+    \ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }\n\
+    \    .am-chip {\n      background: var(--navy-3); border: 1px solid var(--border);\n\
+    \      border-radius: 12px; padding: 18px 16px;\n      display: flex; align-items:\
+    \ center; gap: 12px;\n      transition: all .2s;\n    }\n    .am-chip:hover {\
+    \ border-color: rgba(16,185,129,.35); background: rgba(16,185,129,.06); }\n  \
+    \  .am-chip span:first-child { font-size: 1.4rem; flex-shrink: 0; }\n    .am-chip\
+    \ span:last-child  { font-size: .88rem; font-weight: 500; color: var(--offwhite);\
+    \ line-height: 1.3; }\n    .am-cta { margin-top: 40px; padding: 28px 32px; border-radius:\
+    \ var(--r); background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.2);\
+    \ display: flex; align-items: center; justify-content: space-between; flex-wrap:\
+    \ wrap; gap: 20px; }\n    .am-cta p { color: var(--muted); font-size: .95rem;\
+    \ max-width: 480px; }\n    .am-cta strong { color: white; }\n\n    /* ── EVENTS\
+    \ ──────────────────────────────────────── */\n    .events { background: var(--navy-2);\
+    \ }\n    .ev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,\
+    \ 1fr)); gap: 20px; }\n    .ev-card {\n      background: var(--navy-3); border:\
+    \ 1px solid var(--border);\n      border-radius: var(--r); overflow: hidden; transition:\
+    \ all .25s;\n    }\n    .ev-card:hover { border-color: rgba(14,165,233,.25); transform:\
+    \ translateY(-3px); }\n    .ev-stripe { height: 3px; }\n    .stripe-blue  { background:\
+    \ linear-gradient(90deg, var(--teal), #60c5f7); }\n    .stripe-green { background:\
+    \ linear-gradient(90deg, var(--mint), #6ee7b7); }\n    .stripe-amber { background:\
+    \ linear-gradient(90deg, var(--amber), #fcd34d); }\n    .ev-content { padding:\
+    \ 24px; }\n    .ev-meta { display: flex; align-items: center; gap: 14px; margin-bottom:\
+    \ 16px; }\n    .ev-cal {\n      width: 52px; flex-shrink: 0; border-radius: 10px;\
+    \ overflow: hidden;\n      border: 1px solid var(--border); text-align: center;\n\
+    \    }\n    .ev-cal-month { background: var(--teal); color: white; font-size:\
+    \ .65rem; font-weight: 700; text-transform: uppercase; padding: 3px; letter-spacing:\
+    \ .5px; }\n    .ev-cal-day { background: var(--navy-2); color: white; font-family:\
+    \ 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; padding: 4px 0; line-height:\
+    \ 1; }\n    .ev-info h3 { font-size: 1rem; font-weight: 700; color: white; margin-bottom:\
+    \ 3px; }\n    .ev-info .time { font-size: .8rem; color: var(--muted); }\n    .ev-desc\
+    \ { color: var(--muted); font-size: .87rem; line-height: 1.6; }\n    .ev-badge\
+    \ { display: inline-block; margin-top: 14px; padding: 4px 12px; border-radius:\
+    \ 100px; font-size: .75rem; font-weight: 600; background: rgba(14,165,233,.12);\
+    \ color: var(--teal); }\n\n    /* ── INFO STRIP ─────────────────────────────────────\
+    \ */\n    .info-strip {\n      background: var(--navy-3); padding: 64px 48px;\n\
+    \      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);\n\
+    \    }\n    .is-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns:\
+    \ repeat(auto-fill, minmax(240px, 1fr)); gap: 40px; }\n    .is-panel h3 { font-family:\
+    \ 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: white; margin-bottom:\
+    \ 14px; display: flex; align-items: center; gap: 8px; }\n    .is-panel p, .is-panel\
+    \ li { color: var(--muted); font-size: .88rem; line-height: 1.7; }\n    .is-panel\
+    \ ul { list-style: none; }\n    .is-panel li { padding: 4px 0; border-bottom:\
+    \ 1px solid var(--border); }\n    .is-panel li:last-child { border-bottom: none;\
+    \ }\n    .is-panel a { color: var(--teal); text-decoration: none; }\n    .is-panel\
+    \ a:hover { color: #60c5f7; }\n\n    /* ── MEETINGS ──────────────────────────────────────\
+    \ */\n    .meetings { background: var(--navy); }\n    .mt-grid { display: grid;\
+    \ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }\n\
+    \    .mt-card {\n      background: var(--navy-3); border: 1px solid var(--border);\n\
+    \      border-radius: var(--r); padding: 28px 24px;\n      position: relative;\
+    \ overflow: hidden;\n    }\n    .mt-card::before {\n      content: ''; position:\
+    \ absolute; left: 0; top: 0; bottom: 0; width: 3px;\n    }\n    .mt-card.blue::before\
+    \  { background: var(--teal); }\n    .mt-card.green::before { background: var(--mint);\
+    \ }\n    .mt-card.gray::before  { background: var(--muted); }\n    .mt-freq {\
+    \ font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing:\
+    \ 1px; margin-bottom: 10px; }\n    .mt-card.blue  .mt-freq { color: var(--teal);\
+    \ }\n    .mt-card.green .mt-freq { color: var(--mint); }\n    .mt-card.gray  .mt-freq\
+    \ { color: var(--muted); }\n    .mt-card h3 { font-size: 1.1rem; font-weight:\
+    \ 700; color: white; margin-bottom: 8px; }\n    .mt-card p  { font-size: .88rem;\
+    \ color: var(--muted); line-height: 1.6; }\n    .mt-card a  { color: var(--teal);\
+    \ text-decoration: none; }\n\n    /* ── CTA ────────────────────────────────────────────\
+    \ */\n    .cta-section { background: var(--navy-2); padding: 88px 48px; }\n  \
+    \  .cta-box {\n      max-width: 1200px; margin: 0 auto;\n      border-radius:\
+    \ 24px; overflow: hidden;\n      background: linear-gradient(135deg, #0d2035 0%,\
+    \ #0b2848 50%, #0d1f35 100%);\n      border: 1px solid rgba(14,165,233,.15);\n\
+    \      padding: 64px;\n      display: grid; grid-template-columns: 1fr auto; align-items:\
+    \ center; gap: 40px;\n      position: relative;\n    }\n    .cta-box::before {\n\
+    \      content: ''; position: absolute; top: -60px; right: -60px;\n      width:\
+    \ 300px; height: 300px; border-radius: 50%;\n      background: radial-gradient(circle,\
+    \ rgba(14,165,233,.15) 0%, transparent 70%);\n    }\n    .cta-box h2 { color:\
+    \ white; margin-bottom: 14px; }\n    .cta-box p  { color: var(--muted); font-size:\
+    \ 1rem; margin-bottom: 24px; }\n    .cta-links { display: flex; flex-direction:\
+    \ column; gap: 10px; }\n    .ci { display: flex; align-items: center; gap: 10px;\
+    \ color: var(--muted); font-size: .9rem; }\n    .ci-badge { width: 32px; height:\
+    \ 32px; border-radius: 8px; background: rgba(14,165,233,.12); display: flex; align-items:\
+    \ center; justify-content: center; font-size: .9rem; flex-shrink: 0; }\n    .ci\
+    \ a { color: var(--teal); text-decoration: none; }\n    .cta-actions { display:\
+    \ flex; flex-direction: column; gap: 12px; z-index: 1; }\n\n    /* ── FOOTER ─────────────────────────────────────────\
+    \ */\n    footer {\n      background: #060c16; border-top: 1px solid var(--border);\n\
+    \      padding: 32px 48px; display: flex; align-items: center; justify-content:\
+    \ space-between;\n      flex-wrap: wrap; gap: 16px;\n    }\n    footer p { color:\
+    \ var(--muted); font-size: .83rem; }\n    footer a { color: var(--teal); text-decoration:\
+    \ none; }\n    .footer-links { display: flex; gap: 20px; }\n    .footer-links\
+    \ a { color: var(--muted); font-size: .83rem; transition: color .2s; }\n    .footer-links\
+    \ a:hover { color: white; }\n\n    /* ── MOBILE ────────────────────────────────────────\
+    \ */\n    @media (max-width: 900px) {\n      .hero-wrap { grid-template-columns:\
+    \ 1fr; gap: 40px; }\n      .hero-stats { max-width: 400px; }\n    }\n    @media\
+    \ (max-width: 768px) {\n      nav { padding: 0 20px; }\n      .nav-items { display:\
+    \ none; }\n      .hbg { display: flex; }\n      section, .cta-section { padding:\
+    \ 60px 20px; }\n      .info-strip { padding: 48px 20px; }\n      .hero { padding:\
+    \ 90px 20px 50px; }\n      .cta-box { padding: 36px 24px; grid-template-columns:\
+    \ 1fr; }\n      footer { padding: 24px 20px; flex-direction: column; text-align:\
+    \ center; }\n    }\n  </style>\n</head>\n<body>\n\n<!-- NAV -->\n<nav>\n  <a href=\"\
+    #\" class=\"nav-brand\">\n    <div class=\"nav-orb\">LP</div>\n    <div>\n   \
+    \   <div class=\"nb-name\">Legacy Park</div>\n      <div class=\"nb-sub\">Kennesaw,\
+    \ GA</div>\n    </div>\n  </a>\n  <ul class=\"nav-items\">\n    <li><a href=\"\
+    #portal\">Portal</a></li>\n    <li><a href=\"#amenities\">Amenities</a></li>\n\
+    \    <li><a href=\"#events\">Events</a></li>\n    <li><a href=\"#contact\">Contact</a></li>\n\
+    \    <li><a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\" class=\"btn btn-teal nav-portal\">Resident Login</a></li>\n\
+    \  </ul>\n  <button class=\"hbg\" aria-label=\"Menu\">\n    <span></span><span></span><span></span>\n\
+    \  </button>\n</nav>\n\n<!-- HERO -->\n<header class=\"hero\">\n  <div class=\"\
+    hero-wrap\">\n    <div class=\"hero-left\">\n      <div class=\"hero-chip\">Live\
+    \ · Kennesaw, GA 30144</div>\n      <h1>Your<br><span class=\"accent\">Legacy</span>\
+    \ Starts<br><span class=\"accent2\">Here</span></h1>\n      <p class=\"hero-desc\"\
+    >A thriving master-planned community with 117 acres of parks, 4 pools, nature\
+    \ trails, and a full-time Activities Director keeping the neighborhood alive year-round.</p>\n\
+    \      <div class=\"hero-btns\">\n        <a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\" class=\"btn btn-teal\">Resident Portal ↗</a>\n        <a href=\"\
+    #amenities\" class=\"btn btn-ghost\">Explore Amenities</a>\n        <a href=\"\
+    #events\" class=\"btn btn-ghost\">View Events →</a>\n      </div>\n    </div>\n\
+    \    <div class=\"hero-stats\">\n      <div class=\"hs-item\"><div class=\"hs-num\"\
+    >117</div><div class=\"hs-label\">Acre Town Park</div></div>\n      <div class=\"\
+    hs-item\"><div class=\"hs-num\">4</div><div class=\"hs-label\">Pools</div></div>\n\
+    \      <div class=\"hs-divider\"></div>\n      <div class=\"hs-item\"><div class=\"\
+    hs-num\">11</div><div class=\"hs-label\">Tennis Courts</div></div>\n      <div\
+    \ class=\"hs-item\"><div class=\"hs-num\">11</div><div class=\"hs-label\">Parks</div></div>\n\
+    \      <div class=\"hs-divider\"></div>\n      <div class=\"hs-note\">Full-time\
+    \ <span class=\"hs-highlight\">Activities Director</span> · Events year-round\
+    \ · Most events <span class=\"hs-highlight\">free</span> for residents</div>\n\
+    \    </div>\n  </div>\n</header>\n\n<!-- PORTAL / QUICK LINKS -->\n<section class=\"\
+    portal\" id=\"portal\">\n  <div class=\"container\">\n    <div class=\"s-label\"\
+    >↗ Quick Access</div>\n    <h2>Resident Resources</h2>\n    <p class=\"s-desc\"\
+    >Everything you need as a Legacy Park homeowner — from payments to permits to\
+    \ community updates.</p>\n    <div class=\"pt-grid\">\n      <a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\" class=\"pt-tile\">\n        <div class=\"pt-icon\">\U0001F511\
+    </div>\n        <h3>Owner Portal</h3>\n        <p>Pay assessments, check account\
+    \ status, submit modification requests, access meeting minutes.</p>\n        <div\
+    \ class=\"pt-link\">Log In →</div>\n      </a>\n      <a href=\"https://legacypark.org/event-calendar\"\
+    \ target=\"_blank\" class=\"pt-tile\">\n        <div class=\"pt-icon\">\U0001F4C5\
+    </div>\n        <h3>Event Calendar</h3>\n        <p>Browse all upcoming community\
+    \ events. Most are free to attend for Legacy Park residents.</p>\n        <div\
+    \ class=\"pt-link\">View Calendar →</div>\n      </a>\n      <a href=\"https://legacypark.org/knowledge-base\"\
+    \ target=\"_blank\" class=\"pt-tile\">\n        <div class=\"pt-icon\">\U0001F4DA\
+    </div>\n        <h3>Knowledge Base</h3>\n        <p>Governing docs, policies,\
+    \ modification forms, clubhouse rental, FAQs — all fully searchable.</p>\n   \
+    \     <div class=\"pt-link\">Browse Docs →</div>\n      </a>\n      <a href=\"\
+    https://docs.google.com/forms/d/e/1FAIpQLScqY9K3hBfW_QVNo2PGVzDDyvlc5N62i97MrsCnIhDDtSZdoA/viewform\"\
+    \ target=\"_blank\" class=\"pt-tile\">\n        <div class=\"pt-icon\">\U0001FAAA\
+    </div>\n        <h3>Access Card</h3>\n        <p>New residents: complete the waiver\
+    \ online then visit the HOA office to pick up your access card.</p>\n        <div\
+    \ class=\"pt-link\">Complete Waiver →</div>\n      </a>\n      <a href=\"https://legacypark.org/knowledge-base/committees\"\
+    \ target=\"_blank\" class=\"pt-tile\">\n        <div class=\"pt-icon\">\U0001F91D\
+    </div>\n        <h3>Committees</h3>\n        <p>Multiple committees are open for\
+    \ new members. Get involved and shape your community.</p>\n        <div class=\"\
+    pt-link\">See Openings →</div>\n      </a>\n      <a href=\"https://legacypark.org/knowledge-base/board-of-directors\"\
+    \ target=\"_blank\" class=\"pt-tile\">\n        <div class=\"pt-icon\">\U0001F4CB\
+    </div>\n        <h3>Board of Directors</h3>\n        <p>Meet your current board\
+    \ members. Meetings held 2nd &amp; 4th Tuesdays at 6:30 PM monthly.</p>\n    \
+    \    <div class=\"pt-link\">View Board →</div>\n      </a>\n    </div>\n  </div>\n\
+    </section>\n\n<!-- AMENITIES -->\n<section class=\"amenities\" id=\"amenities\"\
+    >\n  <div class=\"container\">\n    <div class=\"s-label\">\U0001F33F What's Included</div>\n\
+    \    <h2>Amenities &amp; Facilities</h2>\n    <p class=\"s-desc\">Your HOA dues\
+    \ fund an exceptional array of amenities — from resort-style pools to scenic trails\
+    \ to cultural venues.</p>\n    <div class=\"am-grid\">\n      <div class=\"am-chip\"\
+    ><span>\U0001F3CA</span><span>4 Swimming Pools</span></div>\n      <div class=\"\
+    am-chip\"><span>\U0001F3BE</span><span>11 Tennis Courts</span></div>\n      <div\
+    \ class=\"am-chip\"><span>\U0001F333</span><span>11 Neighborhood Parks</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F3DE️</span><span>117-Acre Town Park</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F33F</span><span>7-Acre Town Green</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F6B4</span><span>Miles of Bike Paths</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F97E</span><span>Lighted Nature Trails</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F3C0</span><span>Basketball Courts</span></div>\n\
+    \      <div class=\"am-chip\"><span>⚾</span><span>Baseball Field</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F3AD</span><span>Cultural Amphitheater</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F3B5</span><span>Woodlands Bandstand</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F356</span><span>Picnic Grove</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F30A</span><span>Scenic Lake</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F309</span><span>Beautiful Bridges</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F476</span><span>Children's Play Areas</span></div>\n\
+    \      <div class=\"am-chip\"><span>\U0001F4D6</span><span>Children's Storytime</span></div>\n\
+    \    </div>\n    <div class=\"am-cta\">\n      <p><strong>Full-time Activities\
+    \ Director</strong> — organizes community events throughout the year. Check the\
+    \ calendar for what's coming up next.</p>\n      <a href=\"https://legacypark.org/event-calendar\"\
+    \ target=\"_blank\" class=\"btn btn-mint\">See All Events →</a>\n    </div>\n\
+    \  </div>\n</section>\n\n<!-- EVENTS -->\n<section class=\"events\" id=\"events\"\
+    >\n  <div class=\"container\">\n    <div class=\"s-label\">\U0001F4C5 Community\
+    \ Calendar</div>\n    <h2>Upcoming Events</h2>\n    <p class=\"s-desc\">Regular\
+    \ meetings, community gatherings, and special events — most are free for all Legacy\
+    \ Park residents.</p>\n    <div class=\"ev-grid\">\n      <div class=\"ev-card\"\
+    >\n        <div class=\"ev-stripe stripe-blue\"></div>\n        <div class=\"\
+    ev-content\">\n          <div class=\"ev-meta\">\n            <div class=\"ev-cal\"\
+    ><div class=\"ev-cal-month\">Mar</div><div class=\"ev-cal-day\">11</div></div>\n\
+    \            <div class=\"ev-info\"><h3>HOA Planning Meeting</h3><div class=\"\
+    time\">\U0001F4CD Clubhouse · 6:30 PM</div></div>\n          </div>\n        \
+    \  <p class=\"ev-desc\">2nd Tuesday monthly planning session — open to all residents.\
+    \ Bring questions, ideas, and feedback.</p>\n          <div class=\"ev-badge\"\
+    >Monthly</div>\n        </div>\n      </div>\n      <div class=\"ev-card\">\n\
+    \        <div class=\"ev-stripe stripe-green\"></div>\n        <div class=\"ev-content\"\
+    >\n          <div class=\"ev-meta\">\n            <div class=\"ev-cal\"><div class=\"\
+    ev-cal-month\" style=\"background:var(--mint)\">Mar</div><div class=\"ev-cal-day\"\
+    >25</div></div>\n            <div class=\"ev-info\"><h3>HOA Board Meeting</h3><div\
+    \ class=\"time\">\U0001F4CD Clubhouse · 6:30 PM</div></div>\n          </div>\n\
+    \          <p class=\"ev-desc\">4th Tuesday official board meeting. Decisions\
+    \ are made here — resident attendance is encouraged and welcomed.</p>\n      \
+    \    <div class=\"ev-badge\" style=\"background:rgba(16,185,129,.12);color:var(--mint)\"\
+    >Monthly</div>\n        </div>\n      </div>\n      <div class=\"ev-card\">\n\
+    \        <div class=\"ev-stripe stripe-amber\"></div>\n        <div class=\"ev-content\"\
+    >\n          <div class=\"ev-meta\">\n            <div class=\"ev-cal\"><div class=\"\
+    ev-cal-month\" style=\"background:var(--amber);color:var(--navy)\">Apr</div><div\
+    \ class=\"ev-cal-day\">1</div></div>\n            <div class=\"ev-info\"><h3>HOA\
+    \ Office Open Saturday</h3><div class=\"time\">\U0001F4CD HOA Office · 9–11 AM</div></div>\n\
+    \          </div>\n          <p class=\"ev-desc\">1st Saturday of the month. Walk-in\
+    \ questions, access cards, and welcome packets for new residents.</p>\n      \
+    \    <div class=\"ev-badge\" style=\"background:rgba(245,158,11,.12);color:var(--amber)\"\
+    >Monthly</div>\n        </div>\n      </div>\n    </div>\n    <div style=\"text-align:center;margin-top:36px;\"\
+    >\n      <a href=\"https://legacypark.org/event-calendar\" target=\"_blank\" class=\"\
+    btn btn-ghost\" style=\"margin:0 auto;\">View Full Calendar ↗</a>\n    </div>\n\
+    \  </div>\n</section>\n\n<!-- INFO STRIP -->\n<div class=\"info-strip\">\n  <div\
+    \ class=\"is-grid\">\n    <div class=\"is-panel\">\n      <h3>\U0001F4CD Location</h3>\n\
+    \      <p>4201 Legacy Park Circle<br>Kennesaw, GA 30144<br><br>\n      <a href=\"\
+    tel:7709192556\">(770) 919-2556</a><br>\n      Fax: (770) 919-0066<br>\n     \
+    \ <a href=\"mailto:HOAoffice@LegacyPark.org\">HOAoffice@LegacyPark.org</a></p>\n\
+    \    </div>\n    <div class=\"is-panel\">\n      <h3>\U0001F550 Office Hours</h3>\n\
+    \      <p>Mon–Fri: 10:00 AM – 2:00 PM<br>\n      1st Saturday: 9:00 AM – 11:00\
+    \ AM<br><br>\n      Appointments available — call or email the office to schedule.</p>\n\
+    \    </div>\n    <div class=\"is-panel\">\n      <h3>\U0001F3E0 New Residents</h3>\n\
+    \      <ul>\n        <li>Visit office for welcome packet</li>\n        <li>Complete\
+    \ access card waiver</li>\n        <li>Register in Resident Portal</li>\n    \
+    \    <li>Explore your amenities</li>\n        <li>Check upcoming events</li>\n\
+    \      </ul>\n    </div>\n    <div class=\"is-panel\">\n      <h3>\U0001F4EC Board\
+    \ Contact</h3>\n      <p>Questions for the board?<br>\n      <a href=\"mailto:boardmembers@legacypark.org\"\
+    >boardmembers@legacypark.org</a><br><br>\n      Meetings: 2nd &amp; 4th Tuesday<br>\n\
+    \      6:30 PM at the Clubhouse<br>\n      Residents always welcome.</p>\n   \
+    \ </div>\n  </div>\n</div>\n\n<!-- MEETINGS -->\n<section class=\"meetings\">\n\
+    \  <div class=\"container\">\n    <div class=\"s-label\">\U0001F4CB Board Governance</div>\n\
+    \    <h2>Meeting Schedule</h2>\n    <p class=\"s-desc\">All meetings held at the\
+    \ Legacy Park Clubhouse at 6:30 PM. Your participation matters.</p>\n    <div\
+    \ class=\"mt-grid\">\n      <div class=\"mt-card blue\">\n        <div class=\"\
+    mt-freq\">2nd Tuesday · Monthly</div>\n        <h3>Planning Meeting</h3>\n   \
+    \     <p>Open discussions on community planning, projects, and resident feedback.\
+    \ All homeowners welcome.</p>\n      </div>\n      <div class=\"mt-card green\"\
+    >\n        <div class=\"mt-freq\">4th Tuesday · Monthly</div>\n        <h3>Board\
+    \ Meeting</h3>\n        <p>Official decisions are made here. The board strongly\
+    \ encourages resident participation and attendance.</p>\n      </div>\n      <div\
+    \ class=\"mt-card gray\">\n        <div class=\"mt-freq\">Questions?</div>\n \
+    \       <h3>Contact the Board</h3>\n        <p>Reach board members directly:<br><a\
+    \ href=\"mailto:boardmembers@legacypark.org\">boardmembers@legacypark.org</a></p>\n\
+    \      </div>\n    </div>\n  </div>\n</section>\n\n<!-- CTA / CONTACT -->\n<section\
+    \ class=\"cta-section\" id=\"contact\">\n  <div class=\"cta-box\">\n    <div>\n\
+    \      <h2>Ready to Connect?</h2>\n      <p>Whether you're a new resident, long-time\
+    \ homeowner, or just have a question — the HOA staff is here to help.</p>\n  \
+    \    <div class=\"cta-links\">\n        <div class=\"ci\"><div class=\"ci-badge\"\
+    >\U0001F4CD</div><span>4201 Legacy Park Circle, Kennesaw, GA 30144</span></div>\n\
+    \        <div class=\"ci\"><div class=\"ci-badge\">\U0001F4DE</div><a href=\"\
+    tel:7709192556\">(770) 919-2556</a></div>\n        <div class=\"ci\"><div class=\"\
+    ci-badge\">✉️</div><a href=\"mailto:HOAoffice@LegacyPark.org\">HOAoffice@LegacyPark.org</a></div>\n\
+    \        <div class=\"ci\"><div class=\"ci-badge\">\U0001F4EC</div><a href=\"\
+    mailto:boardmembers@legacypark.org\">boardmembers@legacypark.org</a></div>\n \
+    \     </div>\n    </div>\n    <div class=\"cta-actions\">\n      <a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\" class=\"btn btn-teal\">\U0001F511 Resident Portal</a>\n  \
+    \    <a href=\"mailto:HOAoffice@LegacyPark.org\" class=\"btn btn-ghost\">✉️ Email\
+    \ HOA Staff</a>\n      <a href=\"https://legacypark.org/knowledge-base\" target=\"\
+    _blank\" class=\"btn btn-ghost\">\U0001F4DA Knowledge Base</a>\n      <a href=\"\
+    https://docs.google.com/forms/d/e/1FAIpQLScqY9K3hBfW_QVNo2PGVzDDyvlc5N62i97MrsCnIhDDtSZdoA/viewform\"\
+    \ target=\"_blank\" class=\"btn btn-ghost\">\U0001FAAA Access Card Waiver</a>\n\
+    \    </div>\n  </div>\n</section>\n\n<!-- FOOTER -->\n<footer>\n  <p>© 2025 Legacy\
+    \ Park Community Association · Kennesaw, GA · <a href=\"tel:7709192556\">(770)\
+    \ 919-2556</a></p>\n  <div class=\"footer-links\">\n    <a href=\"https://legacypark.org\"\
+    >legacypark.org</a>\n    <a href=\"https://legacypark.managebuilding.com/Resident/portal/login\"\
+    \ target=\"_blank\">Resident Portal</a>\n    <a href=\"mailto:HOAoffice@LegacyPark.org\"\
+    >Contact</a>\n  </div>\n</footer>\n\n</body>\n</html>\n"
+kind: ConfigMap
+metadata:
+  name: legacy-park-html
+  namespace: legacy-park

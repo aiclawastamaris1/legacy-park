@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: legacy-park
+  namespace: legacy-park
+spec:
+  selector:
+    app: legacy-park
+  ports:
+    - port: 80
+      targetPort: 80
